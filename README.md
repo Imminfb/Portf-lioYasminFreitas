@@ -45,7 +45,7 @@ fig1 = px.line(df, x='noted_date', y='temp', title="Evolução da Temperatura")
 st.plotly_chart(fig1)
 ```
 ![image](https://github.com/user-attachments/assets/38b7c1bd-f06c-455f-a604-f89b005e76f7)
-**Distribuição das Temperaturas por Ambiente**```
+**Distribuição das Temperaturas por Ambiente**
 Código responsável pela visualização:
 ```
 st.header("Distribuição das Temperaturas por Ambiente")
@@ -54,7 +54,6 @@ st.plotly_chart(fig2)
 ```
 ![image](https://github.com/user-attachments/assets/2952c61b-11bf-4008-8f0e-99522d577cf8)
 **Média de Temperatura por Ambiente**
-```
 Código responsável pela visualização:
 ```
 st.header("Média de Temperatura por Ambiente")
@@ -63,13 +62,10 @@ fig3 = px.bar(df_mean, x='out_in', y='temp', title="Média de Temperatura por Am
 st.plotly_chart(fig3)
 ```
 ![image](https://github.com/user-attachments/assets/bf06d163-1821-4a34-acef-65aaab93f262)
-```
 # Transformações para Insigths
 As views apresentadas acima tem uma importância muito grande para o projeto, o Postgres foi configurado e realizou transformações em que facilitam a organização dos dados de temperatura otimizando a maneira de fornecer insigths. Abaixo está como foi feita essa transformação:
 Primeiramente, os dados de temperatura são armazenados na tabela temp_logs:
-```
 ![image](https://github.com/user-attachments/assets/46a7cf28-b1ea-4a89-b85c-a073daa9a222)
-```
 Esses dados são coletados dos sensores IoT e são fundamentais para as análises e visualizações.
 Em seguida, foram criadas três views citadas acima para realizar transformações e gerar insights sobre os dados:
 
@@ -77,21 +73,15 @@ Em seguida, foram criadas três views citadas acima para realizar transformaçõ
 **view_avg_temp_per_room**
 Esta view é responsável por calcular a média de temperatura por sala.
 O propóstio dessa view é obter uma visão geral do comportamento térmico ao longo do tempo.
-```
 ![image](https://github.com/user-attachments/assets/71f53e23-335b-469f-9972-c0b5cde3b49a)
-```
 **view_highest_temp_logs**
 Esta view é responsável por selecionar todos os registros que passem de 35 graus
 O propóstio dessa view é evitar críticas para prevenção de falhas ou segurança, monitorando os registros de temperatura
-```
 ![image](https://github.com/user-attachments/assets/e35a5e66-98a0-4299-bad8-c53efd0c6a23)
-```
 **view_latest_temps**
 Esta view é responsável por retornar os registros mais recentes de temperatura
 O propóstio dessa view é obter a última temperatura que foi medida com a intenão de saber a condição atual do local
-```
 ![image](https://github.com/user-attachments/assets/5d4a9edb-9523-4a10-ad69-936cc8d51e51)
-```
 Essas transformações são fundamentais para o funcionamento do dashboard criado no projeto. e com isso fornecem insigths valiosos que auxiliam nas análises comentadas do próximo tópico
 # Insights Obtidos
 **Identificação de Padrões e Tendências**
