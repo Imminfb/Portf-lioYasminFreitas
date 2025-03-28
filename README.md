@@ -29,7 +29,6 @@ Com este comando, foram construídas as imagens Docker do Projeto, logo em segui
 ![image](https://github.com/user-attachments/assets/e6994a24-df5a-4e4e-b9a4-6ffc8e27c229)
 # Capturas de Tela
 **Dados de Temperatura IoT**
-
 Colunas e seus significados:
 - id: Identificação única de cada leitura
 - room_id: ID da sala onde o dispositivo foi instalado
@@ -37,8 +36,7 @@ Colunas e seus significados:
 - temp: Registro de temperatura
 - out/in: Indica se a leitura foi feita dentro ou fora da sala
 ![image](https://github.com/user-attachments/assets/e490e6df-eb38-4c83-8a55-368b3a6f9761)
-**Temperatura ao Longo do Tempo**
-  
+Temperatura ao Longo do Tempo
 Código responsável pela visualização:
 ```
 st.header("Temperatura ao longo do tempo")
